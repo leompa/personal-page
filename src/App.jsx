@@ -15,6 +15,9 @@ function App() {
           <div className="projects-grid">
             {projects.map((project) => (
               <article key={project.id} className="project-card">
+                {project.image && (
+                  <img src={project.image} alt={project.title} className="project-image" />
+                )}
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <div className="tags">
